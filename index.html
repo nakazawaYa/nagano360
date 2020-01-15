@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nagano360</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image/common/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="image/common/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="https://use.typekit.net/xah6ouf.css">
+</head>
+<body>
+    <video src="movie/top.mp4" autoplay playsinline muted loop></video>
+    <div class="layerHdrmov"></div>
+    <section class="top">
+        <div class="navBer">
+            <a href="" class="navLogo">
+                <img src="image/common/navLogo.png" alt="">
+            </a>
+            <a class="menu">
+                <span class="menuLine menuLineTop"></span>
+                <span class="menuLine menuLineCenter"></span>
+                <span class="menuLine menuLineBottom"></span>
+            </a>
+        </div>
+        <nav class="gnav">
+            <div class="gnavWrap">
+                <ul class="gnavMenu">
+                    <li class="gnavMenuItem"><a href="index.html">TOP</a></li>
+                    <li class="gnavMenuItem"><a href="">概要</a></li>
+                    <li class="gnavMenuItem"><a href="">目次</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="">戸隠神社奥社</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="zenkoji.html">善光寺</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="">長野駅</a></li>
+                </ul>
+            </div><!--gnav-wrap-->
+        </nav>
+        <img src="image/top/topLogoW.png" alt="" class="topLogo">
+        <div class="scrollBtn"><span></span><span></span><span></span>SCROLL</div>
+    </section>
+
+    <section class="about indexSection">
+        <div class="sectionContentWrap">
+		    <h1>概要</h1>
+		    <p>このサイトは、長野に少しでも興味をもっていただくべく
+            360°カメラを使って撮影した画像、映像を使って長野を紹介するサイトです。</p>
+        </div>
+    </section>
+
+    <section class="toc indexSection">
+        <div class="sectionContentWrap">
+		<h1>目次</h1>
+        <div class="cardContainer">
+			<a href="#" class="cardWrap">
+				<div class="card">
+					<img src="image/top/okusyaToc.png" alt="#">
+					<h2>戸隠神社奥社</h2>
+					<h3>Togakushi Shrine Okusha</h3>
+				</div>
+			</a>
+			<a href="#" class="cardWrap">
+				<div class="card">
+					<img src="image/top/zenkojiToc.png" alt="#">
+					<h2>善光寺</h2>
+					<h3>Zenkoji Temple</h3>
+				</div>
+			</a>
+			<a href="#" class="cardWrap">
+				<div class="card">
+					<img src="image/top/naganoToc.png" alt="#">
+					<h2>長野駅</h2>
+					<h3>Nagano Station</h3>
+				</div>
+			</a>
+        </div>
+            <a href="" class="tocBtn">もっとみる</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+		    <a href=""><img src="image/common/footerLogo.png" alt=""></a>
+            <small>&copy;2020 nagano360 nakazawa yuuta</small>
+        </div>
+	</footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $('.menu').on('click',function(){
+            $('.menuLine').toggleClass('active');
+            $('.gnav').fadeToggle();
+        });
+    </script>
+</body>
+</html>
