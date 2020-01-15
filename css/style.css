@@ -553,6 +553,7 @@ footer small {
 
 @media (max-width: 750px) {
   .titleImgWrap {
+    min-width: initial;
     height: 50vh;
   }
 }
@@ -563,6 +564,13 @@ footer small {
   height: auto;
   z-index: -100;
   pointer-events: none;
+}
+
+@media (max-width: 750px) {
+  .titleImgWrap .titleImg {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .titleImgWrap .titleLogoImg {

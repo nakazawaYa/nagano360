@@ -503,6 +503,7 @@ footer {
     height: 500px;
     overflow: hidden;
     @include sp {
+        min-width: initial;
         height: 50vh;
     }
     .titleImg {
@@ -511,6 +512,10 @@ footer {
         height: auto;
         z-index: -100;
         pointer-events: none;
+        @include sp {
+            width: auto;
+            height: 100%;
+        }
     }
     .titleLogoImg {
         width: 350px;
