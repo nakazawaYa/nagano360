@@ -99,6 +99,25 @@ input, select {
 
 /* --- reset css end --- */
 
+$bpc: 1100px;
+$sp: 750px;
+
+@mixin bpc {
+    @media (min-width: ($bpc)) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (min-width: ($sp)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
 /*menu*/
 .menu{
     height: 20px;
@@ -155,6 +174,9 @@ input, select {
 }
 .gnavMenuItem{
     margin: 40px 0;
+    @include sp {
+        margin: 30px 0;
+    }
 }
 .gnavMenuItem a{
     color: #fff;
@@ -245,25 +267,6 @@ input, select {
 /*scroll end*/
 
 
-$bpc: 1100px;
-$pc: 960px;
-
-@mixin bpc {
-    @media (min-width: ($bpc)) {
-        @content;
-    }
-}
-@mixin pc {
-    @media (min-width: ($pc)) {
-        @content;
-    }
-}
-@mixin sp {
-    @media (max-width: ($pc)) {
-        @content;
-    }
-}
-
 body {
     overflow-x: hidden;
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif ;
@@ -304,6 +307,9 @@ body {
                 height: 24px;
                 padding: 18px 0;
                 margin-left: 30px;
+                @include sp {
+                    height: 20px;
+                }
             }
         }
     }
@@ -335,6 +341,10 @@ section {
         width: 90%;
         max-width: 350px;
         margin: 0 auto;
+        @include sp {
+            max-width: 160px;
+            font-size: 24px;
+        }
     }
     p {
         line-height: 2;
@@ -389,14 +399,16 @@ section {
         right: 0;
     }
 	.cardContainer {
-		display: flex;
+        display: flex;
+        flex-flow: row wrap;
         margin: 0 auto;
         padding: 90px 20px 0;
         max-width: 1200px;
-        justify-content: space-between;
+        justify-content: space-evenly;
         border-top: 3px solid #666;
         @include sp {
             padding: 90px 0 0 0;
+            display: block;
         }
     }
 }
@@ -409,6 +421,9 @@ section {
 }
 .card {
     box-shadow: 0 2px 5px #ccc;
+    @include sp {
+        margin-bottom: 30px;
+    }
 	img {
 		width: 100%
 	}
@@ -448,17 +463,27 @@ footer {
 }
 .footerContainer {
     padding: 30px 0;
+    @include sp {
+        padding: 16px;
+    }
     a {
         display: inline-block;
         padding-bottom: 30px;
+        @include sp {
+            padding-bottom: 16px;
+        }
         img {
             width: 120px;
+            @include sp {
+                width: 80px;
+            }
         }
     }
     small {
         display: block;
-        font-weight: 800;
         font-style: normal;
+        font-weight: 400;
+        color: #333;
     }
 }
 
@@ -467,6 +492,9 @@ footer {
 .lowerTop {
     position: relative;
     height: 500px;
+    @include sp {
+        height: 50vh;
+    }
 }
 .titleImgWrap{
     display: block;
@@ -474,6 +502,9 @@ footer {
     min-width: 1400px;
     height: 500px;
     overflow: hidden;
+    @include sp {
+        height: 50vh;
+    }
     .titleImg {
         opacity: .6;
         width: 100%;
@@ -490,6 +521,9 @@ footer {
         bottom: 0;
         margin: auto;
         pointer-events: none;
+        @include sp {
+            width: 65%;
+        }
     }
 }
 .movieContents360{
@@ -506,6 +540,9 @@ footer {
     padding: 70px 50px 0;
     margin: 0 auto;
     border-top: solid 3px #000;
+    @include sp {
+        padding: 70px 0 0 ;
+    }
 }
 .youtube {
     position: relative;
@@ -525,6 +562,9 @@ footer {
     justify-content: center;
     margin-top: 50px;
     height: 200px;
+    @include sp {
+        display: none;
+    }
     > img {
         width: 200px;
         height: auto;
@@ -550,6 +590,12 @@ footer {
     height: 600px;
     max-width: 1200px;
     border-top: solid 3px #000;
+    @include sp {
+        height: 400px;
+        padding: 70px 0 0;
+        margin-left: calc(((100vw - 100%) / 2) * -1);
+        margin-right: calc(((100vw - 100%) / 2) * -1);
+    }
 }
 .lowerInformation {
     background: #fff url(../image/common/rocky-wall.png) repeat;
@@ -564,6 +610,9 @@ footer {
         margin: 0 auto;
         padding: 70px 50px 0;
         border-top: solid 3px #666;
+        @include sp {
+            padding: 70px 0 0;
+        }
     }
 }
 .informationText{
@@ -572,6 +621,9 @@ footer {
     h2,p {
         text-align: left;
         padding: 0 50px;
+        @include sp {
+            padding: 0 20px;
+        }
     }
     h2 {
         margin-bottom: 30px;
@@ -610,12 +662,18 @@ footer {
         overflow: hidden;
         margin-left: calc(((100vw - 100%) / 2) * -1);
         margin-right: calc(((100vw - 100%) / 2) * -1);
+        @include sp {
+            padding-bottom: 300px;
+        }
         iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100% !important;
             height: 400px !important;
+            @include sp {
+                height: 300px !important;
+            }
         }
     }
 }

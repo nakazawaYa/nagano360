@@ -28,8 +28,10 @@
                     <li class="gnavMenuItem"><a href="index.html">TOP</a></li>
                     <li class="gnavMenuItem"><a href="">概要</a></li>
                     <li class="gnavMenuItem"><a href="">目次</a></li>
-                    <li class="gnavMenuItem gnavMenuItemLower"><a href="">戸隠神社奥社</a></li>
                     <li class="gnavMenuItem gnavMenuItemLower"><a href="zenkoji.html">善光寺</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="">戸隠神社奥社</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="">上田城跡公園</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="">軽井沢アウトレット</a></li>
                     <li class="gnavMenuItem gnavMenuItemLower"><a href="">長野駅</a></li>
                 </ul>
             </div><!--gnav-wrap-->
@@ -112,10 +114,9 @@
         window.addEventListener('load', onVrViewLoad)
         function onVrViewLoad() {
             var vrView = new VRView.Player('#vrview', {
-                image: 'image/zenkoji/zenkoji_flat.jpg', //画像を埋め込みたい場合。値にパスを指定。
+                image: './image/zenkoji/zenkojiFlat.jpg', //画像を埋め込みたい場合。値にパスを指定。
                 width: '100%', //コンテンツの幅を指定。
                 height: '100%', //コンテンツの高さを指定。
-                is_stereo: true,
             });
         }
     </script>

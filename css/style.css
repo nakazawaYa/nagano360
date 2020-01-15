@@ -162,6 +162,12 @@ input, select {
   margin: 40px 0;
 }
 
+@media (max-width: 750px) {
+  .gnavMenuItem {
+    margin: 30px 0;
+  }
+}
+
 .gnavMenuItem a {
   color: #fff;
   font-size: 2em;
@@ -302,6 +308,12 @@ body .layerHdrmov {
   margin-left: 30px;
 }
 
+@media (max-width: 750px) {
+  .top .navBer .navLogo img {
+    height: 20px;
+  }
+}
+
 .top .topLogo {
   position: absolute;
   top: 0;
@@ -311,13 +323,13 @@ body .layerHdrmov {
   margin: auto;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 750px) {
   .top .topLogo {
     width: 700px;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 750px) {
   .top .topLogo {
     width: 80%;
   }
@@ -337,6 +349,13 @@ section h1 {
   width: 90%;
   max-width: 350px;
   margin: 0 auto;
+}
+
+@media (max-width: 750px) {
+  section h1 {
+    max-width: 160px;
+    font-size: 24px;
+  }
 }
 
 section p {
@@ -398,16 +417,18 @@ section p {
 
 .toc .cardContainer {
   display: flex;
+  flex-flow: row wrap;
   margin: 0 auto;
   padding: 90px 20px 0;
   max-width: 1200px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-top: 3px solid #666;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 750px) {
   .toc .cardContainer {
     padding: 90px 0 0 0;
+    display: block;
   }
 }
 
@@ -421,6 +442,12 @@ section p {
 
 .card {
   box-shadow: 0 2px 5px #ccc;
+}
+
+@media (max-width: 750px) {
+  .card {
+    margin-bottom: 30px;
+  }
 }
 
 .card img {
@@ -470,19 +497,38 @@ footer small {
   padding: 30px 0;
 }
 
+@media (max-width: 750px) {
+  .footerContainer {
+    padding: 16px;
+  }
+}
+
 .footerContainer a {
   display: inline-block;
   padding-bottom: 30px;
+}
+
+@media (max-width: 750px) {
+  .footerContainer a {
+    padding-bottom: 16px;
+  }
 }
 
 .footerContainer a img {
   width: 120px;
 }
 
+@media (max-width: 750px) {
+  .footerContainer a img {
+    width: 80px;
+  }
+}
+
 .footerContainer small {
   display: block;
-  font-weight: 800;
   font-style: normal;
+  font-weight: 400;
+  color: #333;
 }
 
 /* --- lowerTop --- */
@@ -491,12 +537,24 @@ footer small {
   height: 500px;
 }
 
+@media (max-width: 750px) {
+  .lowerTop {
+    height: 50vh;
+  }
+}
+
 .titleImgWrap {
   display: block;
   background: #000;
   min-width: 1400px;
   height: 500px;
   overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .titleImgWrap {
+    height: 50vh;
+  }
 }
 
 .titleImgWrap .titleImg {
@@ -518,6 +576,12 @@ footer small {
   pointer-events: none;
 }
 
+@media (max-width: 750px) {
+  .titleImgWrap .titleLogoImg {
+    width: 65%;
+  }
+}
+
 .movieContents360 {
   background-image: url(../image/common/arches.png);
 }
@@ -534,6 +598,12 @@ footer small {
   padding: 70px 50px 0;
   margin: 0 auto;
   border-top: solid 3px #000;
+}
+
+@media (max-width: 750px) {
+  .youtubeWrap {
+    padding: 70px 0 0;
+  }
 }
 
 .youtube {
@@ -556,6 +626,12 @@ footer small {
   justify-content: center;
   margin-top: 50px;
   height: 200px;
+}
+
+@media (max-width: 750px) {
+  .movieTextWrap {
+    display: none;
+  }
 }
 
 .movieTextWrap > img {
@@ -588,6 +664,15 @@ footer small {
   border-top: solid 3px #000;
 }
 
+@media (max-width: 750px) {
+  #vrview {
+    height: 400px;
+    padding: 70px 0 0;
+    margin-left: calc(((100vw - 100%) / 2) * -1);
+    margin-right: calc(((100vw - 100%) / 2) * -1);
+  }
+}
+
 .lowerInformation {
   background: #fff url(../image/common/rocky-wall.png) repeat;
 }
@@ -606,6 +691,12 @@ footer small {
   border-top: solid 3px #666;
 }
 
+@media (max-width: 750px) {
+  .lowerInformation .informationTextWrap {
+    padding: 70px 0 0;
+  }
+}
+
 .informationText {
   max-width: 1000px;
   margin: 0 auto;
@@ -614,6 +705,12 @@ footer small {
 .informationText h2, .informationText p {
   text-align: left;
   padding: 0 50px;
+}
+
+@media (max-width: 750px) {
+  .informationText h2, .informationText p {
+    padding: 0 20px;
+  }
 }
 
 .informationText h2 {
@@ -662,10 +759,22 @@ footer small {
   margin-right: calc(((100vw - 100%) / 2) * -1);
 }
 
+@media (max-width: 750px) {
+  .lowerMap .gmap {
+    padding-bottom: 300px;
+  }
+}
+
 .lowerMap .gmap iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100% !important;
   height: 400px !important;
+}
+
+@media (max-width: 750px) {
+  .lowerMap .gmap iframe {
+    height: 300px !important;
+  }
 }
