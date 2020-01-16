@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7BA23F">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>長野駅 | nagano360</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image//common/favIcon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="image/common/favIcon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="https://use.typekit.net/xah6ouf.css">
+</head>
+<body>
+    <section class="top lowerTop">
+        <div class="navBer">
+            <a href="index.html" class="navLogo">
+                <img src="image/common/navLogo.png" alt="">
+            </a>
+            <a class="menu">
+                <span class="menuLine menuLineTop"></span>
+                <span class="menuLine menuLineCenter"></span>
+                <span class="menuLine menuLineBottom"></span>
+            </a>
+        </div>
+        <nav class="gnav">
+            <div class="gnavWrap">
+                <ul class="gnavMenu">
+                    <li class="gnavMenuItem"><a href="index.html">TOP</a></li>
+                    <li class="gnavMenuItem"><a href="">概要</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="zenkoji.html">善光寺</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="togakushi.html">戸隠神社奥社</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="ueda.html">上田城跡公園</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="karuizawa.html">軽井沢アウトレット</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="naganoeki.html">長野駅</a></li>
+                </ul>
+            </div><!--gnav-wrap-->
+        </nav>
+        <p class="titleImgWrap">
+            <img src="image/naganoeki/top.jpg" alt="" class="titleImg">
+            <img src="image/naganoeki/naganoekiLogoW.png" alt="" class="titleLogoImg">
+        </p>
+    </section>
+
+    <section class="movieContents360">
+        <div class="sectionContentWrap">
+            <h1>360°動画</h1>
+            <div class="youtubeWrap">
+                <div class="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zL07h5h46BE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="movieTextWrap">
+                <img src="image/naganoeki/qr.png" alt="">
+                <p><span>&larr;</span>スマホからご覧になる場合はこちらから</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="panoramicImage">
+        <div class="sectionContentWrap">
+            <h1>パノラマ画像</h1>
+            <div id="vrview"></div>
+        </div>
+    </section>
+
+    <section class="lowerInformation">
+        <div class="sectionContentWrap">
+            <h1>概要</h1>
+            <div class="informationTextWrap">
+            <div class="informationText">
+                <p>長野駅（ながのえき）は、長野県長野市大字栗田および南千歳一丁目にある<br>
+                東日本旅客鉄道（JR東日本）・しなの鉄道・長野電鉄の駅である。<br>
+                長野県の県庁所在地・長野市の中心駅で、県内最大規模のターミナル駅となっている。<br>
+                北陸新幹線はあさまの始終点となっている他、かがやき、はくたかの全列車が停車する。<br>
+                2015年の北陸新幹線金沢延伸により、新駅ビルと一体的に建設された5代目駅舎に建て替えられた。<br>
+                <br>
+                冬場になるとウィンタースポーツを目的に観光客が国内外から訪れる。<br>
+                決して都会的な雰囲気ではないが、落ち着いていて生活しやすくまとまっている駅である。<br>
+                また、善光寺口と東口の栄え方の差が激しく、間違えて東口に出てもすぐわかるのも田舎らしい。</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lowerMap">
+        <div class="sectionContentWrap">
+            <h1>地図</h1>
+            <div class="gmapWrap">
+                <div class="gmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3201.3045123210604!2d138.18645501528556!3d36.64312427998128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d86928bda4687%3A0x352975ada43bd23b!2z6ZW36YeO6aeF!5e0!3m2!1sja!2sjp!4v1579202294141!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+		    <a href=""><img src="image/common/footerLogo.png" alt=""></a>
+            <small>&copy;2020 nagano360 nakazawa yuuta</small>
+        </div>
+	</footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="vrview/build/vrview.min.js"></script>
+    <script>
+        $('.menu').on('click',function(){
+            $('.menuLine').toggleClass('active');
+            $('.gnav').fadeToggle();
+        });
+        window.addEventListener('load', onVrViewLoad);
+        function onVrViewLoad() {
+            var vrView = new VRView.Player('#vrview', {
+                image: 'image/naganoeki/flat.jpg', //画像を埋め込みたい場合。値にパスを指定。
+                width: '100%', //コンテンツの幅を指定。
+                height: '100%', //コンテンツの高さを指定。
+            });
+        }
+    </script>
+</body>
+</html>

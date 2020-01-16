@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7BA23F">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>軽井沢アウトレット | nagano360</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image//common/favIcon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="icon" href="image/common/favIcon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="https://use.typekit.net/xah6ouf.css">
+</head>
+<body>
+    <section class="top lowerTop">
+        <div class="navBer">
+            <a href="index.html" class="navLogo">
+                <img src="image/common/navLogo.png" alt="">
+            </a>
+            <a class="menu">
+                <span class="menuLine menuLineTop"></span>
+                <span class="menuLine menuLineCenter"></span>
+                <span class="menuLine menuLineBottom"></span>
+            </a>
+        </div>
+        <nav class="gnav">
+            <div class="gnavWrap">
+                <ul class="gnavMenu">
+                    <li class="gnavMenuItem"><a href="index.html">TOP</a></li>
+                    <li class="gnavMenuItem"><a href="">概要</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="zenkoji.html">善光寺</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="togakushi.html">戸隠神社奥社</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="ueda.html">上田城跡公園</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="karuizawa.html">軽井沢アウトレット</a></li>
+                    <li class="gnavMenuItem gnavMenuItemLower"><a href="naganoeki.html">長野駅</a></li>
+                </ul>
+            </div><!--gnav-wrap-->
+        </nav>
+        <p class="titleImgWrap">
+            <img src="image/karuizawa/top.jpg" alt="" class="titleImg">
+            <img src="image/karuizawa/karuizawaLogoW.png" alt="" class="titleLogoImg">
+        </p>
+    </section>
+
+    <section class="movieContents360">
+        <div class="sectionContentWrap">
+            <h1>360°動画</h1>
+            <div class="youtubeWrap">
+                <div class="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ktKdqpmivmU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="movieTextWrap">
+                <img src="image/karuizawa/qr.png" alt="QRコード">
+                <p><span>&larr;</span>スマホからご覧になる場合はこちらから</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="panoramicImage">
+        <div class="sectionContentWrap">
+            <h1>パノラマ画像</h1>
+            <div id="vrview"></div>
+        </div>
+    </section>
+
+    <section class="lowerInformation">
+        <div class="sectionContentWrap">
+            <h1>概要</h1>
+            <div class="informationTextWrap">
+            <div class="informationText">
+                <p>ブランドの廃番品やサンプル商品などを、お手頃価格で購入できるアウトレット店等がいっぱい。<br>
+                イーストには24の店があり、うちアウトレットは16店。ニューウエストには<br>
+                イタリアブランドのセレクトショップも豊富で68店、うちアウトレット56店。<br>
+                ニューウエスト奥のウエストには生活雑貨やお土産店が29店舗も。<br>
+                軽井沢の定番、広大なショッピングモール。<br>
+                <br>
+                その他には夏は避暑地として、野鳥に会える施設や自然に囲まれたカフェを楽しんだり<br>
+                冬は寒いがスキーやスノーボードを始めとしたウインタースポーツ<br>
+                珍しいものだとカーリングを楽しめる施設がある。</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lowerMap">
+        <div class="sectionContentWrap">
+            <h1>地図</h1>
+            <div class="gmapWrap">
+                <div class="gmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.8277791143955!2d138.63297471527696!3d36.340723580045896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601dd37ba8d166b3%3A0xe8cbe5ae3d9b5e72!2z6Lu95LqV5rKiIOODl-ODquODs-OCueOCt-ODp-ODg-ODlOODs-OCsOODl-ODqeOCtg!5e0!3m2!1sja!2sjp!4v1579200319042!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+		    <a href=""><img src="image/common/footerLogo.png" alt=""></a>
+            <small>&copy;2020 nagano360 nakazawa yuuta</small>
+        </div>
+	</footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="vrview/build/vrview.min.js"></script>
+    <script>
+        $('.menu').on('click',function(){
+            $('.menuLine').toggleClass('active');
+            $('.gnav').fadeToggle();
+        });
+        window.addEventListener('load', onVrViewLoad);
+        function onVrViewLoad() {
+            var vrView = new VRView.Player('#vrview', {
+                image: 'image/karuizawa/flat.jpg', //画像を埋め込みたい場合。値にパスを指定。
+                width: '100%', //コンテンツの幅を指定。
+                height: '100%', //コンテンツの高さを指定。
+            });
+        }
+    </script>
+</body>
+</html>

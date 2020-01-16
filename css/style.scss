@@ -161,7 +161,7 @@ $sp: 750px;
     position: fixed;
     width: 100%;
     z-index: 98;
-    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif ;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .gnavWrap{
     align-items:center;
@@ -181,12 +181,12 @@ $sp: 750px;
 .gnavMenuItem a{
     color: #fff;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     transition: .5s;
 }
 .gnavMenuItemLower a{
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: normal;
 }
 .gnavMenuItem a:hover{
@@ -209,6 +209,7 @@ $sp: 750px;
     padding-top: 80px;
     color: #fff;
     font-weight: bold;
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 .scrollBtn span {
@@ -268,7 +269,7 @@ $sp: 750px;
 
 body {
     overflow-x: hidden;
-	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif ;
+	font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
     > video {
         position: fixed;
         right: 0;
@@ -299,8 +300,21 @@ body {
         position: fixed;
         width: 100%;
         z-index: 100;
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0,0,0,0.3);
         backdrop-filter: blur(5px);
+        animation-name: fadein;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         .navLogo {
             img{
                 height: 24px;
@@ -389,7 +403,7 @@ section {
 }
 
 .toc {
-    background: #fff url(../image/common/connected.png) repeat;
+    background: #eee url(../image/common/connected.png) repeat;
     padding-top: 40px;
     h1 {
         position: absolute;
@@ -397,26 +411,38 @@ section {
         left: 0;
         right: 0;
     }
-	.cardContainer {
+}
+.cardContainerWrap {
+    margin: 0 auto;
+    .cardContainer {
         display: flex;
         flex-flow: row wrap;
         margin: 0 auto;
         padding: 90px 20px 0;
         max-width: 1200px;
-        justify-content: space-evenly;
+        justify-content: start;
         border-top: 3px solid #666;
         @include sp {
             padding: 90px 0 0 0;
             display: block;
         }
+        .cardWrap {
+            background: #fff;
+            width: calc( ( 100% - 100px ) / 3);
+            text-align: left;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            text-decoration: none;
+            transition-duration: 300ms;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            &:hover {
+                box-shadow: 0px 6px 8px #333;
+                opacity: 0.6;
+            }
+        }
     }
-}
-.cardWrap {
-    width: calc( ( 100% - 100px ) / 3);
-    text-align: left;
-	margin-bottom: 50px;
-    text-decoration: none;
-    background: #fff;
 }
 .card {
     box-shadow: 0 2px 5px #ccc;
@@ -517,7 +543,7 @@ footer {
         }
     }
     .titleLogoImg {
-        width: 350px;
+        height: 160px;
         position: absolute;
         top: 0;
         left: 0;
@@ -526,7 +552,8 @@ footer {
         margin: auto;
         pointer-events: none;
         @include sp {
-            width: 65%;
+            width: 75%;
+            height: auto;
         }
     }
 }
@@ -602,7 +629,7 @@ footer {
     }
 }
 .lowerInformation {
-    background: #fff url(../image/common/rocky-wall.png) repeat;
+    background: #fff url(../image/common/connected.png) repeat;
     h1 {
         position: absolute;
         top: -30px;
@@ -640,10 +667,13 @@ footer {
         &:last-child {
             margin-bottom: 0;
         }
+        span {
+            font-weight: bold;
+        }
     }
 }
 .lowerMap {
-    background: url(../image/common/connected.png) repeat;
+    background: url(../image/common/rocky-wall.png) repeat;
     > .sectionContentWrap{
         max-width: initial;
     }
