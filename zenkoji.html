@@ -106,7 +106,7 @@
 	</footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="//storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+    <script src="vrview/build/vrview.min.js"></script>
     <script>
         $('.menu').on('click',function(){
             $('.menuLine').toggleClass('active');
@@ -115,7 +115,7 @@
         window.addEventListener('load', onVrViewLoad);
         function onVrViewLoad() {
             var vrView = new VRView.Player('#vrview', {
-                image: './image/zenkoji/zenkojiFlat.jpg', //画像を埋め込みたい場合。値にパスを指定。
+                image: 'image/zenkoji/zenkojiFlat.jpg', //画像を埋め込みたい場合。値にパスを指定。
                 width: '100%', //コンテンツの幅を指定。
                 height: '100%', //コンテンツの高さを指定。
             });
