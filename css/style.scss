@@ -441,6 +441,9 @@ section {
                 box-shadow: 0px 6px 8px #333;
                 opacity: 0.6;
             }
+            &:last-child {
+                pointer-events:none;
+            }
         }
     }
 }

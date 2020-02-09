@@ -469,6 +469,10 @@ section p {
   opacity: 0.6;
 }
 
+.cardContainerWrap .cardContainer .cardWrap:last-child {
+  pointer-events: none;
+}
+
 .card {
   box-shadow: 0 2px 5px #ccc;
 }
