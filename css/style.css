@@ -469,11 +469,8 @@ section p {
   opacity: 0.6;
 }
 
-.cardContainerWrap .cardContainer .cardWrap:last-child {
-  pointer-events: none;
-}
-
 .card {
+  background: #fff;
   box-shadow: 0 2px 5px #ccc;
 }
 
@@ -503,6 +500,10 @@ section p {
   margin-top: 8px;
   padding-bottom: 20px;
   font-weight: 300;
+}
+
+.card > div {
+  height: 74px;
 }
 
 .tocBtn {
